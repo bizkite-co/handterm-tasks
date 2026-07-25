@@ -40,3 +40,15 @@ The Monaco-based terminal prompt had three bugs when running locally after sever
 ## Completion Criteria
 
 All three reported issues resolved: cursor moves to end of typing, transparent vim background matching terminal, vim enabled in terminal prompt with insert mode start and normal-mode re-entry working
+
+## Solution
+
+Fixed three bugs in the Monaco-based terminal prompt:
+
+1. **Cursor position** — Added `setValueAndFocusEnd()` helper that moves cursor to end after every `setValue()` call. All 7 call sites updated in useMonacoTerminal.ts.
+2. **Background transparency** — Changed `div.view-line > span { background: #0007 }` to `#0000` in terminal.css.
+3. **Vim in terminal prompt** — Enabled `initVimMode` for terminal mode in MonacoCore, starts in insert mode via `Vim.handleKey(instance, 'i')`, and made the key handler mode-aware: in normal mode all keys defer to vim (fixing re-entry via i/a/o), in insert mode existing terminal handling runs.
+4. **Bonus crash fix** — Added missing `useMemo` import in useCommand.ts.
+
+---
+**Completed in commit:** `a873f75`

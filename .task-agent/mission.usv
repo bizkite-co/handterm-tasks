@@ -1,2 +1,3 @@
 Create Monaco terminal config matching XTerm adapter configcreate-monaco-terminal-config-matching-xterm-adapter-config
 Fix edit mode navigation (?activity=edit not working)fix-edit-mode-navigation-activityedit-not-working
+Evict xterm.js from the projectevict-xterm.js-from-the-project

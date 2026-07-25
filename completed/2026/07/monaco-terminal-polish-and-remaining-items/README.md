@@ -30,3 +30,10 @@ created_at: 2026-07-25T10:57:27.920634-07:00
 ## Completion Criteria
 
 Left offset is 0px, prompt displays on first load, all CSS overrides verified working, no regressions in editor mode
+
+## Solution
+
+Fixed prompt protection bleed to line 2+ (backspace guard now only applies on line 1), added vim-status-bar opacity 50%. Verified left offset is 0px. Committed as 6b604c9.
+
+---
+**Completed in commit:** `6b604c9`

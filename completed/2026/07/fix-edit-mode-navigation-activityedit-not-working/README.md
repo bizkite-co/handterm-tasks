@@ -30,3 +30,10 @@ User reports they can't navigate to edit mode anymore. The edit command is defin
 ## Completion Criteria
 
 Typing 'edit' command in terminal navigates to edit activity, Monaco editor renders in editor mode with stored content
+
+## Solution
+
+Root cause: edit command requires Cognito auth. User was not logged in. Login is a two-step interactive process: `login <username>` then type password. After login, edit command works. No code fix needed — the auth flow is working correctly.
+
+---
+**Completed in commit:** `6b604c9`

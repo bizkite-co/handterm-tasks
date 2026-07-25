@@ -1,0 +1,9 @@
+{
+  "kind": "host_tree",
+  "migrated_at": "2026-07-24T17:44:10.037088+00:00",
+  "migrated_from": "/home/mstouffer/repos/handterm-proj/handterm/.task-agent/tasks",
+  "moniker": "bizkite-co/handterm",
+  "remotes_before": null,
+  "subject_origin": "git@github.com:bizkite-co/handterm.git",
+  "version": 1
+}

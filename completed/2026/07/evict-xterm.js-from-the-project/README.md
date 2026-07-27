@@ -36,3 +36,10 @@ Remove from dependencies/devDependencies:
 ## Completion Criteria
 
 No xterm imports, no @xterm packages in package.json, no XtermAdapterConfig.ts, no xterm CSS, all tests pass
+
+## Solution
+
+Removed all xterm.js dead code and packages. Deleted: useTerminal.ts, useTerminal.test.ts, XtermAdapterConfig.ts. Removed xterm CSS rules (.xterm-viewport, .xterm-screen, .xterm-rows, .xterm-cursor-block). Removed @xterm/xterm, @xterm/addon-fit, react-xtermjs from package.json. Removed from vite.config.ts optimizeDeps. Updated TerminalTestUtils.ts, TerminalPage.ts (e2e), HandTermWrapper.test.tsx to remove xterm references. Updated setup.ts test mocks to remove xterm mocks. All pre-existing TS errors remain, no new errors introduced.
+
+---
+**Completed in commit:** `f041f80`

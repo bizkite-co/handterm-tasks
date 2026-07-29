@@ -9,3 +9,10 @@ Add alt+s keydown handler to editor MonacoCore (same as terminal's useMonacoTerm
 ## Completion Criteria
 
 alt+s exits insert mode in both terminal and editor MonacoCore instances, is idempotent when pressed multiple times in normal mode
+
+## Solution
+
+Added `currentVimModeRef` and `editorKeydownRef` to MonacoCore. The vim-mode-change event now tracks mode internally. In editor mode, an editor.onKeyDown handler intercepts Alt+S: when in insert mode it sends `<Esc>` via monacoVim.VimMode.Vim.handleKey; when already in normal mode it silently consumes the event — fully idempotent.
+
+---
+**Completed in commit:** `8edb6b7`

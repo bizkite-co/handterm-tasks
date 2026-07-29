@@ -1,1 +1,2 @@
 Fix Monaco editor test mocks in HandTermWrapper.test.tsxfix-monaco-editor-test-mocks-in-handtermwrapper.test.tsx
+Add defineTheme mock to fix MonacoCore.focus.spec.tsx and MonacoCore.spec.tsxadd-definetheme-mock-to-fix-monacocore.focus.spec.tsx-and-monacocore.spec.tsx

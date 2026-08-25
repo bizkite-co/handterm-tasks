@@ -1,0 +1,9 @@
+{
+  "slug": "standardize-error-handling-with-effect-causeeither-and-structured-logging",
+  "worker_id": "agent:default:pid-111448",
+  "worktree_path": ".gwt/standardize-error-handling-with-effect-causeeither-and-structured-logging",
+  "acquired_at": "2026-08-25T23:00:18.412073+00:00",
+  "ttl_seconds": 7200,
+  "expires_at": "2026-08-26T01:00:18.412073+00:00",
+  "status": "active"
+}

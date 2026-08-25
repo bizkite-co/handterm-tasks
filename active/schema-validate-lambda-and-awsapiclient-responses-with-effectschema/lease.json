@@ -1,0 +1,9 @@
+{
+  "slug": "schema-validate-lambda-and-awsapiclient-responses-with-effectschema",
+  "worker_id": "agent:default:pid-111448",
+  "worktree_path": ".gwt/schema-validate-lambda-and-awsapiclient-responses-with-effectschema",
+  "acquired_at": "2026-08-25T22:12:41.251992+00:00",
+  "ttl_seconds": 7200,
+  "expires_at": "2026-08-26T00:12:41.251992+00:00",
+  "status": "active"
+}

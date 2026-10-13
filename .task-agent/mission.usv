@@ -4,3 +4,4 @@ Fix Monaco editor test mocks in HandTermWrapper.test.tsxfix-monaco-editor-test-
 Add defineTheme mock to fix MonacoCore.focus.spec.tsx and MonacoCore.spec.tsxadd-definetheme-mock-to-fix-monacocore.focus.spec.tsx-and-monacocore.spec.tsx
 Fix useActivityMediator tutorial skip test timingfix-useactivitymediator-tutorial-skip-test-timing
 Validate userStorage Lambda request payloads with @effect/schema (requires bundling)validate-userstorage-lambda-request-payloads-with-effectschema-requires-bundlingschema-validate-lambda-and-awsapiclient-responses-with-effectschema
+Yazi-like file browse (`br`)yazi-like-file-browse-br

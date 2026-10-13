@@ -5,3 +5,4 @@ Add defineTheme mock to fix MonacoCore.focus.spec.tsx and MonacoCore.spec.tsxad
 Fix useActivityMediator tutorial skip test timingfix-useactivitymediator-tutorial-skip-test-timing
 Validate userStorage Lambda request payloads with @effect/schema (requires bundling)validate-userstorage-lambda-request-payloads-with-effectschema-requires-bundlingschema-validate-lambda-and-awsapiclient-responses-with-effectschema
 Yazi-like file browse (`br`)yazi-like-file-browse-br
+MVP: `br` miller-column browse over GitHub and S3mvp-br-miller-column-browse-over-github-and-s3yazi-like-file-browse-br

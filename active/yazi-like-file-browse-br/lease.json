@@ -1,0 +1,9 @@
+{
+  "slug": "yazi-like-file-browse-br",
+  "worker_id": "grok:default:pid-2754547",
+  "worktree_path": ".gwt/yazi-like-file-browse-br",
+  "acquired_at": "2026-10-13T17:44:33.221881+00:00",
+  "ttl_seconds": 14400,
+  "expires_at": "2026-10-13T21:44:33.221881+00:00",
+  "status": "active"
+}

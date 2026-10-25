@@ -27,3 +27,10 @@ When `TutorialManager.tsx` renders the tutorial phrase `jkl;` (`packages/types/s
 2. `<Chord displayChar=";" />` renders `9.svg` with `;` character span instead of `undefined.svg`.
 3. `<Chord displayChar=":" />` renders `59.svg` with `:` character span.
 4. Automated test verifies that all characters in tutorial phrases resolve to defined chord glyphs without missing/undefined entries.
+
+## Solution
+
+Fixed the root cause in `KeySequences/publishHandChords.py` where `CASE_RE` stopped on the first semicolon in `; and :;` comments from `handex.c`, causing chord code 9 to have an empty string key and dropping colon (59). Re-ran `publish-board` to regenerate `allChords.ts` and `59.svg`. Added unit tests in `TutorialManager.test.tsx` and `phraseCurriculum.test.ts` to guarantee all tutorial keys resolve to valid chord entries and avoid `undefined.svg`.
+
+---
+**Completed in commit:** `190026a`

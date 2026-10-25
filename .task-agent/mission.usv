@@ -10,3 +10,4 @@ Nested S3 prefixes for miller columnsnested-s3-prefixes-for-miller-columnsmvp-
 GitHub path drill-in and text preview panegithub-path-drill-in-and-text-preview-panemvp-br-miller-column-browse-over-github-and-s3yazi-like-file-browse-br
 Point `ls` and `gh tree` at browsepoint-ls-and-gh-tree-at-browsemvp-br-miller-column-browse-over-github-and-s3yazi-like-file-browse-br
 Browse polish: images, filter, copy between mountsbrowse-polish-images-filter-copy-between-mountsnested-s3-prefixes-for-miller-columns,github-path-drill-in-and-text-preview-paneyazi-like-file-browse-br
+Fix regression where tutorial nextChars renders undefined.svg for semicolon and colonfix-regression-where-tutorial-nextchars-renders-undefined.svg-for-semicolon-and-colon

@@ -27,3 +27,17 @@ Implement a `ta` command in Handterm mirroring task-agent CLI conventions:
 4. `ta active <slug>` activates the specified pending task.
 5. Displays clear error if GitHub account is not linked (`gh link`).
 6. Unit test suite passes verifying command parsing, GitHub API interaction, and output formatting.
+
+## Solution
+
+Implemented the 'ta' command in Handterm (with alias 'task') to manage the task-agent mission queue for the repository (default 'bizkite-co/handterm-tasks'):
+1. Registered `ta` (and `task`) in CommandRegistry via dynamic module loading `src/commands/TaCommand.ts`.
+2. Implemented `ta list` (and `ta ls`) to fetch repository tree and render active and pending tasks with colored badges and markdown titles.
+3. Implemented `ta new <title> [-c <criteria>] [-b <body>]` (and `ta add`) to generate standard task Markdown with frontmatter and commit it to `pending/<slug>/README.md`.
+4. Implemented `ta active [slug]` to list active tasks when no slug is given, or activate a pending task by moving it to `active/<slug>/README.md`.
+5. Updated `tokenizeInput` in `src/utils/commandUtils.ts` to support single and double-quoted arguments and switches with spaces.
+6. Added terminal styling in `src/assets/terminal.css` for `.ta-active`, `.ta-pending`, and `.ta-task-list`.
+7. Created comprehensive unit test suite in `src/commands/__tests__/TaCommand.test.ts` (20 tests) and `src/utils/__tests__/commandUtils.test.ts` (5 tests). All 144 unit tests pass, and full production bundle build succeeded.
+
+---
+**Completed in commit:** `no_code_commit`

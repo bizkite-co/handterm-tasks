@@ -1,0 +1,16 @@
+{
+  "slug": "add-ta-task-agent-command-in-handterm-list-new-active",
+  "status": "completed",
+  "start_time": "2026-10-25T16:41:27.667292-07:00",
+  "end_time": "2026-10-25T16:41:27.667292-07:00",
+  "metrics": {
+    "start_time": "2026-10-25T16:41:27.667292-07:00",
+    "model": "unknown",
+    "provider": "google",
+    "cost_usd": 0.0,
+    "tokens_accuracy": "unknown",
+    "end_time": "2026-10-25T16:41:27.667292-07:00",
+    "agent_harness": "antigravity",
+    "duration_seconds": 0.0
+  }
+}

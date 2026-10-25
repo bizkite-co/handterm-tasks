@@ -21,3 +21,10 @@ When the hero dies in the game (3 zombie hits), the game currently exits to the 
 4. A visual failure indicator indicates that the player failed once on the level.
 5. Advancing to the next level resets the level failure state appropriately.
 6. Unit tests verify the respawn and failure indicator behavior.
+
+## Solution
+
+Instead of exiting the game to the normal terminal (`navigate({ activityKey: ActivityType.NORMAL })`) on hero death, the game now auto-respawns after the death animation (1.5s). The hero, zombie, background scroll, and typed command line reset to the beginning of the level, allowing the player to easily stay in the game and retry. A failure badge (`💀 {count}`) appears in the top-right HUD to indicate that the player has failed on the attempt, and resets whenever the level is completed or reset. Also hooked `onHeroDeath` to reset the terminal prompt and added full unit test coverage.
+
+---
+**Completed in commit:** `b77d3ae`

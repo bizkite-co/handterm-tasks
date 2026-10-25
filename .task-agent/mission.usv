@@ -1,6 +1,7 @@
 Schema-validate Lambda and awsApiClient responses with @effect/schemaschema-validate-lambda-and-awsapiclient-responses-with-effectschema
 Standardize error handling with Effect Cause/Either and structured loggingstandardize-error-handling-with-effect-causeeither-and-structured-logging
 Yazi-like file browse (`br`)yazi-like-file-browse-br
+Respawn hero in game on death with failure indicatorrespawn-hero-in-game-on-death-with-failure-indicator
 Fix Monaco editor test mocks in HandTermWrapper.test.tsxfix-monaco-editor-test-mocks-in-handtermwrapper.test.tsx
 Add defineTheme mock to fix MonacoCore.focus.spec.tsx and MonacoCore.spec.tsxadd-definetheme-mock-to-fix-monacocore.focus.spec.tsx-and-monacocore.spec.tsx
 Fix useActivityMediator tutorial skip test timingfix-useactivitymediator-tutorial-skip-test-timing
@@ -10,4 +11,3 @@ Nested S3 prefixes for miller columnsnested-s3-prefixes-for-miller-columnsmvp-
 GitHub path drill-in and text preview panegithub-path-drill-in-and-text-preview-panemvp-br-miller-column-browse-over-github-and-s3yazi-like-file-browse-br
 Point `ls` and `gh tree` at browsepoint-ls-and-gh-tree-at-browsemvp-br-miller-column-browse-over-github-and-s3yazi-like-file-browse-br
 Browse polish: images, filter, copy between mountsbrowse-polish-images-filter-copy-between-mountsnested-s3-prefixes-for-miller-columns,github-path-drill-in-and-text-preview-paneyazi-like-file-browse-br
-Respawn hero in game on death with failure indicatorrespawn-hero-in-game-on-death-with-failure-indicator

@@ -33,3 +33,17 @@ Build an interactive, step-by-step Vim tutorial (`vimtut`) in Handterm using Mon
 3. Reactively verifies cursor position, text modifications, and Vim modes against step completion criteria.
 4. Completing a step automatically advances to the next step with user feedback.
 5. Includes comprehensive unit and integration tests with 100% pass rate.
+
+## Solution
+
+Implemented interactive Vim tutorial (vimtut) in Monaco editor with:
+1. Defined VimTutorialStep types and state signals (vimTutorialStepIndexSignal, completedVimTutorialsSignal, vimStepCompletedSignal).
+2. Built a 6-lesson starter curriculum covering hjkl cursor movement, x character deletion, dw word deletion, i insertion + returning to normal mode, w/b/e word navigation, and :q exiting.
+3. Created VimTutHeader component displaying lesson title, instructions, hints, mode/cursor status, and step advancement.
+4. Integrated verification runner into MonacoCore listening to cursor position, model content, and vim mode changes.
+5. Implemented VimTutCommand registered in command registry and auto-discovered in help.
+6. Integrated with reset command so reset clears vimtut progress.
+7. Added 100% passing unit test coverage (19 new tests, 179 total tests passing) and verified production build.
+
+---
+**Completed in commit:** `no_code_commit`

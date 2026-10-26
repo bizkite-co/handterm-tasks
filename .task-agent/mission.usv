@@ -1,7 +1,6 @@
 Schema-validate Lambda and awsApiClient responses with @effect/schemaschema-validate-lambda-and-awsapiclient-responses-with-effectschema
 Standardize error handling with Effect Cause/Either and structured loggingstandardize-error-handling-with-effect-causeeither-and-structured-logging
 Yazi-like file browse (`br`)yazi-like-file-browse-br
-Implement vimtut interactive Vim tutorial in Monaco editorimplement-vimtut-interactive-vim-tutorial-in-monaco-editor
 Fix Monaco editor test mocks in HandTermWrapper.test.tsxfix-monaco-editor-test-mocks-in-handtermwrapper.test.tsx
 Add defineTheme mock to fix MonacoCore.focus.spec.tsx and MonacoCore.spec.tsxadd-definetheme-mock-to-fix-monacocore.focus.spec.tsx-and-monacocore.spec.tsx
 Fix useActivityMediator tutorial skip test timingfix-useactivitymediator-tutorial-skip-test-timing

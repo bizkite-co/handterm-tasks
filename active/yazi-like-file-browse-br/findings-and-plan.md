@@ -1,4 +1,4 @@
-# Subdirectory Navigation & Storage Architecture Plan
+# Subdirectory Navigation, Editor Height, Return Flow & Syntax Highlighting
 
 ## 1. Issue: GitHub Subdirectory Browsing & 'child' Placeholder (RESOLVED)
 - **Root Cause**: `src/utils/browseFs.ts` previously synthesized a fake `${item.path}/child` item for entries of type `tree`/`directory` via `topLevelTreeKeys()`. When `listGithubTree(repo)` was called without a `path` parameter, only root entries were returned from the API. When navigating into `/github/:owner/:repo/:subpath`, `browseFs` filtered the cached root list and found only the synthetic `child` item. Selecting `child` attempted to fetch non-existent file `${subpath}/child`.
@@ -18,7 +18,14 @@
   2. Wired `BrowseView.tsx` to read synchronously from L1 on render and fallback to L2 IndexedDB, updating storage asynchronously in the background.
   3. Added comprehensive test suite in `src/utils/__tests__/browseStorage.test.ts`.
 
-## 3. Verification
-- All 43 test files (216 tests) passed.
+## 3. Editor Height, Return-to-Browse, and Syntax Highlighting (IMPLEMENTED)
+- **Editor Height**: Increased Monaco editor container to full screen height (`height: calc(100vh - 35px)`, `minHeight: calc(100vh - 45px)` in editor mode) eliminating unnecessary scrolling.
+- **Return to Browse on `:q` / `:wq`**: When opening a file from `BrowseView`, passed the active directory in `groupKey`. In `MonacoCore.tsx`, `:q` and `:wq` detect when `groupKey` corresponds to browse navigation and return directly to `activity=browse&key=<path>` rather than dropping to the CLI prompt.
+- **Code Editor Syntax Highlighting**: Replaced the hardcoded `.json`/`.markdown` check in `HandTermWrapper.tsx` with dynamic extension detection in `getMonacoLanguageForFile()` (`.py` -> `python`, `.ts`/`.tsx` -> `typescript`, `.js` -> `javascript`, `.sh` -> `shell`, `.yaml` -> `yaml`, etc.), activating Monaco's native tokenizers.
+- **Preview Column Syntax Highlighting**: Integrated PrismJS (`prism-python`, `prism-typescript`, `prism-javascript`, `prism-bash`, `prism-json`, `prism-yaml`, `prism-css`, `prism-markup`) in `syntaxHighlight.ts` and styled tokens to match HandTerm's dark terminal palette.
+- **Backspace Key Navigation**: Added `Backspace` as an alias for `h` (parent directory navigation) in `BrowseView.tsx` with zero conflicts against search/creation input prompts.
+
+## 4. Verification
+- All 44 test files (222 unit tests) passed.
 - Production build succeeded cleanly.
-- Committed in commit `f3a3629`.
+- Committed in commits `f3a3629` and `abe966c`.
